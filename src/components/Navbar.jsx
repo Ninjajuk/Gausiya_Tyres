@@ -41,11 +41,11 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow-2xl sticky top-0 w-full z-50 lg:px-[10rem]"
+      className="bg-white shadow-2xl sticky top-0 w-full z-50 lg:px-[5rem]"
     >
-      <div className="container mx-auto flex justify-between items-center p-4">
+      <div className="container mx-auto flex justify-between items-center py-4 ">
         {/* Logo */}
-        <motion.h1 className="text-md lg:text-3xl font-extrabold">
+        <motion.h1 className="text-primary text-md lg:text-3xl font-extrabold">
           <a href="/">Gausiya</a>
         </motion.h1>
 
