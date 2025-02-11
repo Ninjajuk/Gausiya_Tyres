@@ -59,7 +59,7 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={() => toggleSubMenu(item.subMenuKey)}
-                      className="flex items-center justify-between w-full md:w-auto py-2 px-2 hover:text-yellow-400 transition-colors duration-300"
+                      className="flex items-center justify-between w-full md:w-auto py-2 px-2 hover:text-yellow-400 transition-colors duration-300 cursor pointer"
                     >
                       {item.title}
                       <motion.div
@@ -78,7 +78,7 @@ const Navbar = () => {
                         y: openSubMenu === item.subMenuKey ? 0 : -10,
                       }}
                       transition={{ duration: 0.3 }}
-                      className={`absolute left-0 mt-1 bg-purple-800 rounded-lg shadow-lg cursor-pointer w-48 ${
+                      className={`absolute left-0 mt-1 bg-white rounded-lg shadow-lg cursor-pointer w-48 ${
                         openSubMenu === item.subMenuKey ? "block" : "hidden"
                       } md:group-hover:block`}
                     >

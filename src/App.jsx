@@ -18,9 +18,9 @@ function App() {
       <section className='flex flex-col min-h-screen'>
         <Navbar />
         <div className='flex-1'>
-          <BannerSlider/>
-          <ImageConverter/>
-          <ImageCompressor/>
+          {/* <BannerSlider/> */}
+          {/* <ImageConverter/>
+          <ImageCompressor/> */}
           <div className='py-4 px-2 lg:px-[5rem]'><TyreBrand/></div>
           
           <FeaturedServices/>
