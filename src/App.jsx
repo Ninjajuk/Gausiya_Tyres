@@ -2,6 +2,7 @@
 import './App.css'
 import FeaturedServices from './components/FeatureServices'
 import CopyRightFooter from './components/footer/CopyRightFooter'
+import ImageConverter from './components/ImageConverter'
 
 
 import Navbar from './components/Navbar'
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
         <div className='flex-1'>
           <BannerSlider/>
+          <ImageConverter/>
           <div className='py-4 px-2 lg:px-[5rem]'><TyreBrand/></div>
           
           <FeaturedServices/>
