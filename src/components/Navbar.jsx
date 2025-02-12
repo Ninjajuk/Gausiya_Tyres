@@ -85,7 +85,7 @@ const Navbar = () => {
                       {item.subMenuItems.map((subItem, subIndex) => (
                         <li
                           key={subIndex}
-                          className="px-4 py-2 hover:bg-yellow-400 hover:text-purple-900 transition-colors duration-300"
+                          className="px-4 py-2 text-secondary hover:bg-yellow-400 hover:text-purple-900 transition-colors duration-300"
                         >
                           <a href={subItem.href}>{subItem.label}</a>
                         </li>

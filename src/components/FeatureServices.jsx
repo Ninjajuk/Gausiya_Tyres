@@ -27,7 +27,7 @@ const FeaturedServices = () => {
       <h2 className="text-3xl font-bold text-center mb-4 text-primary">Featured Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-4  px-4">
         {services.map((service) => (
-            <div key={service.id} className="flex flex-col bg-white  rounded-lg shadow-lg overflow-hidden">
+            <div key={service.id} className="flex flex-col bg-white rounded-lg shadow-md hover:shadow-lg  overflow-hidden">
                 <div className="flex-1">
                     <img src={service.image} alt={service.title} className="w-full h-48 object-cover" />
                 </div>
@@ -37,7 +37,7 @@ const FeaturedServices = () => {
                         {"⭐".repeat(service.rating)}
                     </div> */}
                     <div className="mt-auto w-full">
-                        <button className="mt-2 w-full text-secondary px-4 py-2 ring-1 ring-blue-800  rounded-md cursor-pointer">
+                        <button className="mt-2 w-full text-secondary font-semibold px-4 py-2 ring-1 ring-gray-300  rounded-md shadow-md hover:bg-primary hover:text-white cursor-pointer">
                             Book Now
                         </button>
                     </div>

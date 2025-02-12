@@ -11,21 +11,21 @@ const messages = [
         name: "Samsuddin Ansari",
         title: "Sacred Heart Secondary ",
         message:
-            "The School aims to create a supportive and inclusive environment where every student is encouraged to explore their potential and achieve their personal best in all aspects of their life.",
+            "portive and inclusive environment where every customer is encouraged to explore their potential and achieve their personal best in all aspects of their life.",
         img: "https://avatars.githubusercontent.com/u/108830220?v=4",
-        href: "/principal-message",
+        href: "/message",
     },
     {
         name: "Ms. Jane Smith",
-        title: "Headmistress, Sacred Heart Secondary School",
+        title: "Sacred Heart",
         message:
             "Education is a lifelong journey, and we strive to make it as enriching and inspiring as possible.",
         img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        href: "/headmistress-message",
+        href: "/headm",
     },
 ];
 
-const TwoDivwithCarousel = () => {
+const Testimonial = () => {
     const [index, setIndex] = useState(0);
     // const navigate = useNavigate();
 
@@ -45,7 +45,7 @@ const TwoDivwithCarousel = () => {
         <div className="bg-white  min-h-[500px]  py-2 lg:px-[5rem]">
             <div className="container mx-auto py-2 px-4 ">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-center  mb-4">
-                    Testimonial 
+                    What Our Customers Say
                 </h2>
 
                 {/* Main Content Grid */}
@@ -104,7 +104,7 @@ const TwoDivwithCarousel = () => {
                     <div className="h-[500px] w-full rounded-2xl shadow-md hover:shadow-2xl bg-white p-8 flex flex-col justify-center items-center border border-gray-300 hover:border-primary ">
                         <h2 className="text-lg lg:text-3xl font-bold mb-4">Our Mission & Values</h2>
                         <p className="text-sm lg:text-lg text-center mb-6">
-                            At Sacred Heart Secondary School, we are committed to fostering a culture of excellence, integrity, and compassion.
+                            At Gausiya Tyre , we are committed to quality .
                         </p>
                         <ul className="list-disc list-inside space-y-2 text-md lg:text-lg">
                             <li>Empowering students to achieve their full potential.</li>
@@ -124,4 +124,4 @@ const TwoDivwithCarousel = () => {
     );
 };
 
-export default TwoDivwithCarousel;
+export default Testimonial;
