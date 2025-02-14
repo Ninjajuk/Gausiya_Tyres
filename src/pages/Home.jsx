@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import TyreBrand from '../components/TyreBrand'
 import FeaturedServices from '../components/FeatureServices'
 import HeroSection from '../components/Hero'
+import Marquee from '../components/Marquee'
 
 
 const Tools = () => {
@@ -30,6 +31,7 @@ const Tools = () => {
             <TyreBrand />
           </div>
           <FeaturedServices/>
+          <Marquee/>
           
 
   
