@@ -13,28 +13,52 @@ const Navbar = () => {
 
   const menuItems = [
     {
+      title: "Home",
+      href: "/",
+    },
+    {
       title: "About Us",
       subMenuKey: "about-us",
       subMenuItems: [
-        { label: "Introduction", href: "/introduction" },
-        { label: "Administration & Jurisdiction", href: "/administration-jurisdiction" },
-        { label: "Vision & Mission", href: "/vission-mission" },
-
+        { label: "Our Story", href: "/our-story" },
+        { label: "Why Choose Us?", href: "/why-choose-us" },
+        { label: "Our Team", href: "/our-team" },
       ],
     },
     {
       title: "Services",
-      subMenuKey: "academics",
+      subMenuKey: "services",
       subMenuItems: [
-        { label: "Repair", href: "/academic-course" },
-        { label: "Wheel Alignment", href: "/academic-fee-structure" },
-        { label: "Old Tyre", href: "/academic-faculty" },
+        { label: "Tyre Repair & Home Pickup", href: "/tyre-repair-home-service" },
+        { label: "Wheel Alignment & Balancing", href: "/wheel-alignment-balancing" },
+        { label: "Tyre Retreading", href: "/tyre-retreading" },
+        { label: "Gettis Service", href: "/gettis-service" },
       ],
     },
-    { title: "Rules", href: "/rules-regulations" },
-    { title: "Gallary", href: "/gallary" },
-    { title: "Contact Us", href: "/contact-us" },
+    {
+      title: "Buy Tyres & Accessories",
+      subMenuKey: "buy",
+      subMenuItems: [
+        { label: "New Tyres", href: "/buy-new-tyres" },
+        { label: "Old Tyres (Used)", href: "/buy-used-tyres" },
+        { label: "Retreaded Tyres", href: "/buy-retreaded-tyres" },
+        { label: "Tubes", href: "/buy-tubes" },
+      ],
+    },
+    {
+      title: "Gallery",
+      href: "/gallery",
+    },
+    {
+      title: "FAQs",
+      href: "/faqs",
+    },
+    {
+      title: "Contact Us",
+      href: "/contact-us",
+    },
   ];
+  
 
   return (
     <motion.header
@@ -45,7 +69,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center py-4 ">
         {/* Logo */}
-        <motion.h1 className="text-primary text-md lg:text-3xl font-extrabold">
+        <motion.h1 className="text-primary text-md lg:text-3xl px-2 lg:px-0  font-extrabold uppercase">
           <a href="/">Gausiya</a>
         </motion.h1>
 
@@ -59,7 +83,7 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={() => toggleSubMenu(item.subMenuKey)}
-                      className="flex items-center justify-between w-full md:w-auto py-2 px-2 hover:text-yellow-400 transition-colors duration-300 cursor pointer"
+                      className="flex items-center justify-between w-full md:w-auto py-2 px-2 hover:text-primary   transition-colors duration-300 cursor-pointer"
                     >
                       {item.title}
                       <motion.div
@@ -85,7 +109,7 @@ const Navbar = () => {
                       {item.subMenuItems.map((subItem, subIndex) => (
                         <li
                           key={subIndex}
-                          className="px-4 py-2 text-secondary hover:bg-yellow-400 hover:text-purple-900 transition-colors duration-300"
+                          className="px-4 py-2 mx-2 mb-2  text-base lg:text-sm text-secondary hover:bg-gray-100 hover:text-primary transition-colors duration-300 rounded-md overflow-hidden whitespace-nowrap truncate"
                         >
                           <a href={subItem.href}>{subItem.label}</a>
                         </li>
@@ -95,7 +119,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="block py-2 px-2 hover:text-yellow-400 transition-colors duration-300"
+                    className="block py-2 px-2 hover:text-primary transition-colors duration-300"
                   >
                     {item.title}
                   </a>
@@ -109,7 +133,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <motion.button
             whileTap={{ scale: 0.9 }}
-            className="text-blue-800 focus:outline-none"
+            className="text-red-800 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
@@ -140,14 +164,12 @@ const Navbar = () => {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="fixed inset-y-0 left-0 w-64 bg-white shadow-2xl z-50 flex flex-col"
           >
-            <div className="flex items-center p-4">
-              <div className="px-4 text-lg font-extrabold">
-                <h1>Gausiya</h1>
-              </div>
-              <div className="ml-auto">
+            <div className="w-full flex justify-between  p-4 border border-b-2 border-gray-300 ">
+                {/* <img src='/images/logo.webp' alt="Gausiya Logo" className="w-full max-w-[150px] max-h-12 object-ontain"/> */}
+                <h1 className=" px-2 text-lg text-primary font-semibold uppercase ">Gausiya Tyre</h1>
                 <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="focus:outline-none cursor-pointer"
+                  className=" focus:outline-none cursor-pointer text-red-800 cusor-pointer"
                 >
                   <svg
                     className="w-6 h-6"
@@ -164,7 +186,7 @@ const Navbar = () => {
                     />
                   </svg>
                 </button>
-              </div>
+  
             </div>
             <ul className="space-y-2 p-4">
               {menuItems.map((item, index) => (
@@ -173,7 +195,7 @@ const Navbar = () => {
                     <>
                       <button
                         onClick={() => toggleSubMenu(item.subMenuKey)}
-                        className="flex items-center justify-between w-full py-1 px-4 hover:text-yellow-400 transition-colors duration-300"
+                        className="flex items-center justify-between w-full py-1 px-4 hover:text-primary hover:rounded-md hover:bg-gray-100 transition-colors duration-300 cursor-pointer overflow-hidden whitespace-nowrap truncate"
                       >
                         {item.title}
                         <motion.div
@@ -190,9 +212,9 @@ const Navbar = () => {
                           {item.subMenuItems.map((subItem, subIndex) => (
                             <li
                               key={subIndex}
-                              className="px-4 py-2 text-sm hover:rounded-md hover:bg-yellow-400 hover:text-purple-900 transition-colors duration-300"
+                              className="text-sm hover:rounded-md hover:bg-gray-100 hover:text-primary transition-colors duration-300"
                             >
-                              <a href={subItem.href}>{subItem.label}</a>
+                              <a href={subItem.href} className="block w-full px-4 py-2 cursor-pointer overflow-hidden whitespace-nowrap truncate">{subItem.label}</a>
                             </li>
                           ))}
                         </ul>
@@ -201,7 +223,7 @@ const Navbar = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block py-1 px-4 hover:text-yellow-400 transition-colors duration-300"
+                      className="block py-1 px-4 hover:bg-gray-100 hover:rounded-md hover:text-primary transition-colors duration-300"
                     >
                       {item.title}
                     </a>
@@ -210,7 +232,7 @@ const Navbar = () => {
               ))}
             </ul>
             {/* User Profile */}
-            <div className="mt-auto bg-gray-400 h-16">
+            <div className="mt-auto  h-16">
               <UserProfile />
             </div>
           </motion.div>

@@ -6,9 +6,9 @@ export default function UserProfile() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative mt-auto bg-blue-100 h-16 flex items-center justify-center text-primary-color">
+    <div className="relative mt-auto bg-gray-50 h-16 flex items-center justify-center text-primary-color">
       <div
-        className="flex items-center space-x-2 cursor-pointer p-2 hover:bg-blue-200 rounded-lg"
+        className="flex items-center space-x-2 cursor-pointer p-2 hover:bg-gray-100 text-primary rounded-lg"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FaUser className="w-6 h-6" />

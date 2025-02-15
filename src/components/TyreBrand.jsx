@@ -45,10 +45,11 @@ const TyreBrand = () => {
       {tyrebrands.map((brand) => (
         <div
           key={brand.name}
-          className="flex flex-col items-center border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-200"
+          className="flex flex-col items-center border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-200 cursor-pointer"
         >
-          <img src={brand.logo} alt={brand.name} className="w-16 h-16 mb-2 object-contain" />
-          <span className="text-sm font-medium">{brand.name}</span>
+          {/* <img src={brand.logo} alt={brand.name} className="w-16 h-16 mb-2 object-contain" /> */}
+          <h1 className="text-lg font-semibold">{brand.name}</h1>
+          {/* <span className="text-sm font-medium">{brand.name}</span> */}
         </div>
       ))}
     </div>

@@ -6,12 +6,14 @@ import TyreBrand from '../components/TyreBrand'
 import FeaturedServices from '../components/FeatureServices'
 import HeroSection from '../components/Hero'
 import Marquee from '../components/Marquee'
+import WhyChooseUs from '../components/WhyChooseUs'
 
 
 const Tools = () => {
   return (
     <>
           <section className='flex flex-col min-h-screen'>
+            <Marquee/>
         <Navbar />
         <div className='flex-1'>
           <HeroSection/>
@@ -27,16 +29,12 @@ const Tools = () => {
             </p>
    
           </div>
+          <FeaturedServices/>
           <div className='lg:px-[5rem]'>
             <TyreBrand />
           </div>
-          <FeaturedServices/>
-          <Marquee/>
-          
-
-  
-
-          <Testimonial/>
+          <WhyChooseUs/>
+          <Testimonial/>       
 
         </div>
         <div className='mt-auto'> <CopyRightFooter /></div>
