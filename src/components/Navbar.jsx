@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import UserProfile from "./UserMenu";
+import { MoonIcon, SunIcon } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +11,10 @@ const Navbar = () => {
   const toggleSubMenu = (menu) => {
     setOpenSubMenu(openSubMenu === menu ? null : menu);
   };
+
+  const [darkMode, setDarkMode] = useState(
+    typeof window !== "undefined" ? localStorage.getItem("theme") === "dark" : false
+  );
 
   const menuItems = [
     {
@@ -74,7 +79,7 @@ const Navbar = () => {
         </motion.h1>
 
         {/* Navigation Menu */}
-        <nav className="relative">
+        <nav className="relative flex items-center">
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-1">
             {menuItems.map((item, index) => (
@@ -127,6 +132,13 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-400 cursor-pointer"
+          >
+            {darkMode ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
+          </button>
+          
         </nav>
 
         {/* Mobile Menu Button */}

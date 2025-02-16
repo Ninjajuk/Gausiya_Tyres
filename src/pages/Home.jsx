@@ -34,7 +34,7 @@ const Tools = () => {
             <TyreBrand />
           </div>
           <WhyChooseUs/>
-          <Testimonial/>       
+          {/* <Testimonial/>        */}
 
         </div>
         <div className='mt-auto'> <CopyRightFooter /></div>
