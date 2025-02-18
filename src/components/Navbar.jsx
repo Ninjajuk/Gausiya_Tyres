@@ -75,7 +75,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center py-4 ">
         {/* Logo */}
         <motion.h1 className="text-primary text-md lg:text-3xl px-2 lg:px-0  font-extrabold uppercase">
-          <a href="/">Gausiya</a>
+          <a href="/">Gausiya Tyre</a>
         </motion.h1>
 
         {/* Navigation Menu */}
@@ -134,7 +134,7 @@ const Navbar = () => {
           </ul>
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-400 cursor-pointer"
+            className="hidden lg:block p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-400 cursor-pointer"
           >
             {darkMode ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
           </button>
