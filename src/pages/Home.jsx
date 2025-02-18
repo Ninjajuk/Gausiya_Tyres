@@ -2,14 +2,16 @@ import React from 'react'
 import Testimonial from '../components/Testimonial'
 import CopyRightFooter from '../components/footer/CopyRightFooter'
 import Navbar from '../components/Navbar'
-import TyreBrand from '../components/TyreBrand'
-import FeaturedServices from '../components/FeatureServices'
+
 import HeroSection from '../components/Hero'
 import Marquee from '../components/Marquee'
 import WhyChooseUs from '../components/WhyChooseUs'
+import ServiceHighlights from '../components/ServiceHighlights'
+import Statistics from '../components/Statistics'
+import Newsletter from '../components/Newsletter'
 
 
-const Tools = () => {
+const Homepage = () => {
   return (
     <>
           <section className='flex flex-col min-h-screen'>
@@ -29,12 +31,12 @@ const Tools = () => {
             </p>
    
           </div>
-          <FeaturedServices/>
-          <div className='lg:px-[5rem]'>
-            <TyreBrand />
-          </div>
-          <WhyChooseUs/>
-          {/* <Testimonial/>        */}
+          <ServiceHighlights/>
+          <WhyChooseUs />
+          <Statistics />
+          {/* <ImageCarousel /> */}
+          <Testimonial />
+          <Newsletter />     
 
         </div>
         <div className='mt-auto'> <CopyRightFooter /></div>
@@ -47,4 +49,4 @@ const Tools = () => {
   )
 }
 
-export default Tools
+export default Homepage

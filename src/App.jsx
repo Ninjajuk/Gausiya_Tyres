@@ -1,7 +1,7 @@
 
 import {BrowserRouter as Router,Route, Routes } from 'react-router-dom'
 import './App.css'
-import Home from './pages/Home'
+
 import Booking from './pages/Booking'
 import Tools from './pages/Home'
 import OurStory from './pages/OurStory'
@@ -12,6 +12,7 @@ import ContactUs from './pages/Contactus'
 import TyreRepairHomePickup from './pages/TyreRepairHomePickup'
 import TyreRetreading from './pages/TyreRetreading'
 import ComingSoon from './components/ComingSoon'
+import Homepage from './pages/Home'
 
 
 
@@ -23,7 +24,7 @@ function App() {
 
       <Router>
         <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/why-choose-us" element={<WhyChooseUs />} />
         <Route path="/tools" element={<Tools />} />

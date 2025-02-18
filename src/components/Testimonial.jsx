@@ -47,10 +47,6 @@ const Testimonial = () => {
                 <h2 className="text-3xl md:text-4xl font-extrabold text-center  mb-4">
                     What Our Customers Say
                 </h2>
-
-                {/* Main Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Left Div - Carousel */}
                     <div className="relative h-[500px] w-full overflow-hidden rounded-2xl shadow-md hover:shadow-2xl border border-gray-300 hover:border-primary bg-white">
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -69,9 +65,9 @@ const Testimonial = () => {
                                 <h2 className="text-2xl font-bold text-primary mt-6">
                                     {messages[index].name}
                                 </h2>
-                                <p className="text-md text-blue-800 font-semibold">
+                                {/* <p className="text-md text-blue-800 font-semibold">
                                     {messages[index].title}
-                                </p>
+                                </p> */}
                                 <p className="mt-4 text-sm lg:text-base text-gray-600 text-center max-w-md">
                                     "{messages[index].message}"
                                 </p>
@@ -79,7 +75,7 @@ const Testimonial = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     onClick={() => handleNavigate(messages[index])}
-                                    className="mt-6 px-6 py-2 bg-primary text-white rounded-full hover:bg-purple-800 transition-colors"
+                                    className="mt-6 px-6 py-2 bg-primary text-white rounded-full hover:bg-hoverPrimary transition-colors"
                                 >
                                     Read More
                                 </motion.button>
@@ -88,37 +84,17 @@ const Testimonial = () => {
 
                         <button
                             onClick={prevMessage}
-                            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-primary p-3 rounded-full shadow-lg hover:bg-purple-700 transition-colors"
+                            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-primary p-3 rounded-full shadow-lg hover:bg-hoverPrimary transition-colors cursor-pointer"
                         >
                             <FiChevronLeft size={24} className="text-white" />
                         </button>
                         <button
                             onClick={nextMessage}
-                            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-primary p-3 rounded-full shadow-lg hover:bg-purple-700 transition-colors"
+                            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-primary p-3 rounded-full shadow-lg hover:bg-hoverPrimary transition-colors cursor-pointer"
                         >
                             <FiChevronRight size={24} className="text-white" />
                         </button>
                     </div>
-
-                    {/* Right Div - School Mission and Values */}
-                    <div className="h-[500px] w-full rounded-2xl shadow-md hover:shadow-2xl bg-white p-8 flex flex-col justify-center items-center border border-gray-300 hover:border-primary ">
-                        <h2 className="text-lg lg:text-3xl font-bold mb-4">Our Mission & Values</h2>
-                        <p className="text-sm lg:text-lg text-center mb-6">
-                            At Gausiya Tyre , we are committed to quality .
-                        </p>
-                        <ul className="list-disc list-inside space-y-2 text-md lg:text-lg">
-                            <li>Empowering students to achieve their full potential.</li>
-                            <li>Promoting a culture of respect and inclusivity.</li>
-                            <li>Encouraging innovation and critical thinking.</li>
-                            <li>Building strong character and leadership skills.</li>
-                        </ul>
-                        <button
-                            className="mt-auto px-6 py-2  text-white bg-primary rounded-full hover:bg-blue-800 transition-colors cursor-pointer"
-                        >
-                            Discover More
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     );
