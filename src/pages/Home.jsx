@@ -13,7 +13,7 @@ import TyreSizeCalculator from '../components/tools/TyreSizeCalculator '
 import TyrePressureChecker from '../components/tools/TyrePressureChecker '
 import DiscountCalculator from '../components/tools/DiscountCalculator '
 import TyreComparisonTool from '../components/tools/TyreComparisonTool'
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const Homepage = () => {
   const structuredData = {
