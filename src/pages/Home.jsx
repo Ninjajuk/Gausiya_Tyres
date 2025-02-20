@@ -9,6 +9,10 @@ import WhyChooseUs from '../components/WhyChooseUs'
 import ServiceHighlights from '../components/ServiceHighlights'
 import Statistics from '../components/Statistics'
 import Newsletter from '../components/Newsletter'
+import TyreSizeCalculator from '../components/tools/TyreSizeCalculator '
+import TyrePressureChecker from '../components/tools/TyrePressureChecker '
+import DiscountCalculator from '../components/tools/DiscountCalculator '
+import TyreComparisonTool from '../components/tools/TyreComparisonTool'
 
 
 const Homepage = () => {
@@ -31,7 +35,14 @@ const Homepage = () => {
             </p>
    
           </div>
-          <ServiceHighlights/>
+          <ServiceHighlights />
+          <TyreComparisonTool/>
+          <div className='py-4 px-2 lg:px-[5rem] grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-6'>
+            <TyreSizeCalculator />
+            <TyrePressureChecker />
+            <DiscountCalculator />
+          </div>
+
           <WhyChooseUs />
           <Statistics />
           {/* <ImageCarousel /> */}

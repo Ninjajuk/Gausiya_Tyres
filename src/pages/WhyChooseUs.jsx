@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl text-center"
                 >
-                    <h1 className="text-4xl font-bold text-yellow-400 mb-6">Why Choose Us?</h1>
+                    <h1 className="text-3xl font-bold text-yellow-400 mb-6">Why Choose Us?</h1>
                     <p className="text-lg text-gray-300 leading-relaxed">
                         At <span className="text-yellow-300 font-semibold">TyreCare Solutions</span>, we go the extra mile to ensure top-notch tyre services
                         with unmatched quality and convenience. Here's why we stand out:

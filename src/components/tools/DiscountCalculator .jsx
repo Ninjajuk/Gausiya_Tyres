@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const DiscountCalculator = () => {
     const [total, setTotal] = useState("");
     const [discount, setDiscount] = useState("");
@@ -13,7 +15,7 @@ const DiscountCalculator = () => {
     };
   
     return (
-      <div className="p-6 bg-gray-100 rounded-lg">
+      <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-2xl border border-gray-300">
         <h2 className="text-2xl font-semibold mb-4">Discount Calculator</h2>
         <div className="space-y-4">
           <input
@@ -32,7 +34,7 @@ const DiscountCalculator = () => {
           />
           <button
             onClick={calculateDiscount}
-            className="px-4 py-2 bg-blue-600 text-white rounded"
+            className="px-4 py-2 bg-primary hover:bg-hoverPrimary cursor-pointer text-white rounded"
           >
             Calculate
           </button>

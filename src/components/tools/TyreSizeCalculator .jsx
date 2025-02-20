@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const TyreSizeCalculator = () => {
     const [width, setWidth] = useState("");
     const [aspectRatio, setAspectRatio] = useState("");
@@ -14,7 +16,7 @@ const TyreSizeCalculator = () => {
     };
   
     return (
-      <div className="p-6 bg-gray-100 rounded-lg">
+      <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-2xl border border-gray-300">
         <h2 className="text-2xl font-semibold mb-4">Tyre Size Calculator</h2>
         <div className="space-y-4">
           <input
@@ -40,7 +42,7 @@ const TyreSizeCalculator = () => {
           />
           <button
             onClick={calculateSize}
-            className="px-4 py-2 bg-blue-600 text-white rounded"
+            className="px-4 py-2 bg-primary hover:bg-hoverPrimary text-white rounded cursor-pointer"
           >
             Calculate
           </button>
