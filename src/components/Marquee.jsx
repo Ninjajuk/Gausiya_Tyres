@@ -12,7 +12,7 @@ const Marquee = () => {
               width: 100%;
               overflow: hidden;
               white-space: nowrap;
-              background: black;
+              // background: black;
               color: white;
               padding: 10px 0;
               position: relative;
@@ -40,7 +40,9 @@ const Marquee = () => {
       </style>
 
       <div
-        className="marquee-container"
+        className="marquee-container bg-gradient-to-br from-[#800000] via-[#660000] to-[#4d0000]
+
+"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >

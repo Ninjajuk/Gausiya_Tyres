@@ -16,7 +16,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-500 to-gray-900 text-white py-16 flex justify-center items-center ">
+    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16 flex justify-center items-center ">
       <motion.div
         className="max-w-3xl mx-auto px-6 text-center"
         variants={containerVariants}

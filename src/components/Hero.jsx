@@ -307,6 +307,7 @@
 
 import { motion } from "framer-motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import TyreSearch from "./form/TyreSearch";
 
 export default function HeroSection() {
     return (
@@ -347,7 +348,7 @@ export default function HeroSection() {
                 >
                     Welcome to{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                        Tyre Masters
+                        Gausiya Tyre
                     </span>
                 </motion.h1>
                 <motion.p
@@ -368,6 +369,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.5, duration: 0.8 }}
             >
                 <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-lg">
+                {/* <TyreSearch/> */}
                     <form className="space-y-4">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-300">
@@ -378,7 +380,7 @@ export default function HeroSection() {
                                 id="name"
                                 name="name"
                                 placeholder="Enter your name"
-                                className="mt-1 block w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                className="mt-1 block w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow-400"
                                 required
                             />
                         </div>
@@ -391,7 +393,7 @@ export default function HeroSection() {
                                 id="email"
                                 name="email"
                                 placeholder="Enter your email"
-                                className="mt-1 block w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                className="mt-1 block w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow-400"
                                 required
                             />
                         </div>
@@ -402,7 +404,7 @@ export default function HeroSection() {
                             <select
                                 id="service"
                                 name="service"
-                                className="mt-1 block w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                className="mt-1 block w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-yellow-400 "
                                 required
                             >
                                 <option value="">Select a service</option>

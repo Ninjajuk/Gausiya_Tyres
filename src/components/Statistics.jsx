@@ -23,7 +23,7 @@ const Statistics = () => {
   };
 
   return (
-    <div className="bg-primary text-white py-12">
+    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-12">
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         variants={containerVariants}

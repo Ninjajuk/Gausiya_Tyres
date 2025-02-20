@@ -14,6 +14,8 @@ import TyrePressureChecker from '../components/tools/TyrePressureChecker '
 import DiscountCalculator from '../components/tools/DiscountCalculator '
 import TyreComparisonTool from '../components/tools/TyreComparisonTool'
 import { Helmet } from "react-helmet";
+import TyreBrand from '../components/TyreBrand'
+import TyreSearch from '../components/form/TyreSearch'
 
 const Homepage = () => {
   const structuredData = {
@@ -47,8 +49,6 @@ const Homepage = () => {
         <div className='flex-1'>
           <HeroSection/>
           {/* <BannerSlider/> */}
-          {/* <ImageConverter/>
-          <ImageCompressor/> */}
           <div className='py-4 px-2 lg:px-[5rem]'>
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-center">
               Professional Tyre Services
@@ -65,6 +65,7 @@ const Homepage = () => {
             <TyrePressureChecker />
             <DiscountCalculator />
           </div>
+          <TyreBrand/>
 
           <WhyChooseUs />
           <Statistics />
