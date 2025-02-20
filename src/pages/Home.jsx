@@ -13,11 +13,34 @@ import TyreSizeCalculator from '../components/tools/TyreSizeCalculator '
 import TyrePressureChecker from '../components/tools/TyrePressureChecker '
 import DiscountCalculator from '../components/tools/DiscountCalculator '
 import TyreComparisonTool from '../components/tools/TyreComparisonTool'
-
+import { Helmet } from "react-helmet-async";
 
 const Homepage = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gausiya Tyre",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 KM",
+      "addressLocality": "Umrangso",
+      "addressRegion": "Assam",
+      "postalCode": "788931",
+      "addressCountry": "IN"
+    },
+    "telephone": "+917542067763",
+    "openingHours": "Mo-Fr 09:00-18:00"
+  };
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        <title>Tyre Repair in Umrangso | Fast & Reliable Service | 14 KM</title>
+        <meta name="description" content="Get your tyres repaired quickly in Umrangso. Affordable and professional tyre services available." />
+      </Helmet>
+
           <section className='flex flex-col min-h-screen'>
             <Marquee/>
         <Navbar />
